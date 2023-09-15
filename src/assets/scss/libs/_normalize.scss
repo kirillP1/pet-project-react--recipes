@@ -9,13 +9,21 @@
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	width: 100%;
+	max-width: 100%;
 }
 
 body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto';
+	width: 100%;
+	max-width: 100%;
 }
-
+html,
+body {
+	overflow: hidden;
+}
 a,
 span,
 p,

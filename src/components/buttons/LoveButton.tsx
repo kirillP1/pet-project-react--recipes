@@ -1,7 +1,13 @@
-const LoveButton = () => {
+import { FC } from 'react'
+import { FaRegHeart } from 'react-icons/fa'
+import CustomLink from '../menus/CustomLink'
+
+const LoveButton: FC = () => {
 	return (
 		<div className='love-button'>
-			<div className='love-button__icon'></div>
+			<CustomLink to='/love' className='love-button__icon'>
+				<FaRegHeart />
+			</CustomLink>
 		</div>
 	)
 }

@@ -1,0 +1,107 @@
+@import '../variables';
+.header {
+	background: $green;
+
+	&__container {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&_logo {
+			vertical-align: middle;
+			display: block;
+			font-size: 26px;
+			font-weight: bold;
+			@media (max-width: 767px) {
+				width: 75%;
+			}
+			a {
+				color: $white;
+			}
+		}
+	}
+
+	.menu-header {
+		&__wrapper {
+			display: flex;
+			transition: $transition-fast;
+			@media (max-width: 767px) {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0%;
+				height: 100%;
+				width: 50%;
+				display: none;
+				background: $black;
+				padding: 40px 0;
+
+				&.openMenu {
+					display: block;
+				}
+			}
+		}
+		&__open {
+			display: none;
+
+			@media (max-width: 767px) {
+				display: block;
+				svg {
+					color: white;
+				}
+			}
+		}
+		&__close {
+			display: none;
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			font-size: 26px;
+			color: $white;
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
+		&__item {
+			margin-left: 30px;
+			line-height: 2;
+			a {
+				color: $white;
+				transition: $transition-fast;
+				&.active {
+					color: $yellow;
+				}
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+
+	.love-button {
+		margin-left: 20px;
+		&__icon {
+			background: $yellow;
+			display: block;
+			border-radius: 100%;
+			height: 35px;
+			width: 35px;
+			transition: $transition-fast;
+			&:hover {
+				cursor: pointer;
+				background: $black;
+			}
+			&.active {
+				background: $black;
+			}
+			svg {
+				color: $white;
+				display: block;
+				margin: auto;
+				height: 35px;
+				width: 35px;
+				padding: 8px;
+			}
+		}
+	}
+}
